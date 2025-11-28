@@ -30,9 +30,10 @@ const GlobalStyles = createGlobalStyle`
   a {
     text-decoration: none;
     transition: 200ms;
-    :visited {
-      color: none;
-    }
+  }
+  
+  a:visited {
+    color: inherit;
   }
 
 
