@@ -1,5 +1,7 @@
 # Lacrei Saúde – Desafio Técnico (Voluntariado)
 
+![Preview da Página](./public/assets/img/preview.png)
+
 Aplicação desenvolvida como parte do desafio técnico da **Lacrei Saúde**, com foco na **captação de novos voluntários**.  
 O projeto apresenta informações sobre o programa de voluntariado e permite que o usuário se candidate preenchendo um formulário simples e acessível.
 
@@ -15,6 +17,7 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
 - **Jest + Testing Library**
 - **LocalStorage** (armazenamento do tema da aplicação)
 - **Design System Marsha** + referências visuais do site da [Lacrei Saúde](https://lacreisaude.com.br/)
+- Técnica **Mobile First**
 
 ---
 
@@ -74,6 +77,8 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 - Digitação nos campos
 - Clique no botão de submit
 
+![Testes Realizados](./public/assets/img/testes.png)
+
 ---
 
 ## 🛠️ Como Rodar o Projeto
@@ -95,6 +100,12 @@ npm run dev
 
 ```bash
 http://localhost:3000
+```
+
+5. Para executar os testes basta rodar:
+
+```bash
+npm test
 ```
 
 Obs: Nenhuma variável de ambiente é necessária.
