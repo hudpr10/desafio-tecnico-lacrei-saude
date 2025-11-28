@@ -28,6 +28,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
+    color: ${({ theme }) => theme.colors.emerald40};
     text-decoration: none;
     transition: 200ms;
   }
