@@ -43,13 +43,13 @@ const Header = () => {
       {/* Essa nav é para ser exibida em telas menores */}
       <nav className="nav-icon">
         <Link href={"/help"}>
-          <Button $style="ghost" aria-label="Página de Ajuda">
+          <Button $style="ghost" ariaLabel="Página de Ajuda">
             <HelpIcon color={theme.colors.emerald40} />
           </Button>
         </Link>
         <Button
           handleClick={() => dispatch(changeTheme())}
-          aria-label={darkMode ? "Modo Claro" : "Modo Escuro"}
+          ariaLabel={darkMode ? "Modo Claro" : "Modo Escuro"}
           aria-pressed={darkMode}
         >
           {choseIcon()}

@@ -7,6 +7,8 @@ export type ButtonProps = {
   type?: "button" | "submit" | "reset" | undefined;
   handleClick?: () => void;
   maxWidth?: string;
+  ariaLabel?: string;
+  ariaPressed?: boolean;
 };
 
 const Button = ({
@@ -15,9 +17,13 @@ const Button = ({
   type = "button",
   handleClick,
   $style = "primary",
+  ariaLabel,
+  ariaPressed,
 }: ButtonProps) => {
   return (
     <StyledButton
+      aria-label={ariaLabel}
+      aria-pressed={ariaPressed}
       disabled={disabled}
       type={type}
       onClick={
