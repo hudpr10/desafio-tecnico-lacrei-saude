@@ -115,3 +115,13 @@ Obs: Nenhuma variável de ambiente é necessária.
 O projeto está hospedado na Vercel:
 
 - Link: https://desafio-tecnico-lacrei-saude-ecru.vercel.app/
+
+## 👈 Rollback
+
+O Rollback na Vercel é muito simples, a plataforma a cada `push` feito no github a Vercel realiza um deploy novo do projeto e todos os deploys anteriores ficam guardados na plataforma, basta clicar no deploy desejado e "promover" ele. Essa operação também pode ser realizada pela CLI digitando o comando:
+
+```bash
+vercel rollback deploy_id
+```
+
+Vale mencionar que quando feito pelo CLI é necessário ter o id respectivo do deploy desejado.
