@@ -26,9 +26,9 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Link href={"/"}>
-        <h1>Lacrei Saúde</h1>
-      </Link>
+      <h1>
+        <Link href={"/"}>Lacrei Saúde</Link>
+      </h1>
 
       {/* Essa nav é para ser exibida em telas maiores */}
       <nav className="nav-text">
@@ -43,11 +43,15 @@ const Header = () => {
       {/* Essa nav é para ser exibida em telas menores */}
       <nav className="nav-icon">
         <Link href={"/help"}>
-          <Button $style="ghost">
+          <Button $style="ghost" aria-label="Página de Ajuda">
             <HelpIcon color={theme.colors.emerald40} />
           </Button>
         </Link>
-        <Button handleClick={() => dispatch(changeTheme())}>
+        <Button
+          handleClick={() => dispatch(changeTheme())}
+          aria-label={darkMode ? "Modo Claro" : "Modo Escuro"}
+          aria-pressed={darkMode}
+        >
           {choseIcon()}
         </Button>
       </nav>

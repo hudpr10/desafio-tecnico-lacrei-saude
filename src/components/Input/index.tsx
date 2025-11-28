@@ -20,8 +20,10 @@ const Input = ({ label, placeholder, error, register, name }: InputProps) => {
         {...register(name)}
         id={name}
         autoComplete={name}
+        aria-invalid={Boolean(error)}
+        aria-describedby={error}
       />
-      {error && <span>{error}</span>}
+      {error && <span role="alert">{error}</span>}
     </InputStyled>
   );
 };

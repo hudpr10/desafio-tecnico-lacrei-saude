@@ -11,7 +11,7 @@ const Footer = () => {
       <ul>
         <li>
           <a
-            aria-label="irá abrir uma nova janela para o perfil do desenvolvedor no LinkedIn"
+            aria-label="Abrir perfil no LinkedIn"
             href="https://www.linkedin.com/in/hudson-proque-reis/"
             target="_blank"
             rel="noopener noreferrer"
@@ -23,7 +23,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            aria-label="irá abrir uma nova janela para o perfil do desenvolvedor no Github"
+            aria-label="Abrir repositórios no GitHub"
             href="https://github.com/hudpr10"
             target="_blank"
             rel="noopener noreferrer"
@@ -35,7 +35,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            aria-label="irá abrir uma nova janela com seu e-mail como rementente e do desenvolvedor como destinatário"
+            aria-label="Enviar email para Hudson"
             href="mailto:hudsonpr09@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
