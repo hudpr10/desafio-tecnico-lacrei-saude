@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lacrei Saúde – Desafio Técnico (Voluntariado)
 
-## Getting Started
+Aplicação desenvolvida como parte do desafio técnico da **Lacrei Saúde**, com foco na **captação de novos voluntários**.  
+O projeto apresenta informações sobre o programa de voluntariado e permite que o usuário se candidate preenchendo um formulário simples e acessível.
 
-First, run the development server:
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Next.js (App Router)**
+- **TypeScript**
+- **Styled-Components**
+- **Redux Toolkit** (ajuda para controlar o estado global da aplicação, evitando props desnecessárias)
+- **Zod + React Hook Form** (validação dos campos de maneira clara e objetiva)
+- **Jest + Testing Library**
+- **LocalStorage** (armazenamento do tema da aplicação)
+- **Design System Marsha** + referências visuais do site da [Lacrei Saúde](https://lacreisaude.com.br/)
+
+---
+
+## 📄 Funcionalidades
+
+- Página principal com:
+  - Formulário de candidatura (nome + e-mail)
+  - Tratativa de erros e mensagens de feedback
+  - Componentes reutilizáveis (botão, inputs)
+- Página de ajuda com detalhes do projeto
+- Troca de tema (claro/escuro) utilizando **Redux** + **LocalStorage**
+- Layout completamente responsivo
+- Cuidados com **acessibilidade**, incluindo:
+  - `aria-labels`
+  - HTML semântico
+  - Contraste adequado
+  - Navegação confortável por teclado
+
+---
+
+## 🧩 Estrutura do Projeto
+
+```bash
+/app
+/components
+/styles → estilos globais
+/store → Redux Toolkit
+/providers → Theme provider, redux provider, etc.
+```
+
+O formulário foi construído em um único componente principal, utilizando inputs e botões reaproveitáveis e validados com **Zod** + **React Hook Form**.
+
+---
+
+## 🧪 Testes
+
+Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo quatro áreas principais:
+
+### **Home**
+
+- Teste completo do fluxo do formulário
+- Preenchimento dos campos
+- Clique no botão de envio
+- Retorno ao estado inicial após submissão
+
+### **Header**
+
+- Renderização correta
+- Alteração do tema
+
+### **Footer**
+
+- Renderização correta
+
+### **Form**
+
+- Digitação nos campos
+- Clique no botão de submit
+
+---
+
+## 🛠️ Como Rodar o Projeto
+
+1. Certifique-se de ter o **Node.js** instalado.
+2. Instale as dependências:
+
+```bash
+npm install
+```
+
+3. Execute o servidor local:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Acesse o navegador
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Obs: Nenhuma variável de ambiente é necessária.
 
-## Learn More
+## 🌐 Deploy
 
-To learn more about Next.js, take a look at the following resources:
+O projeto está hospedado na Vercel:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Link: https://desafio-tecnico-lacrei-saude-ecru.vercel.app/
