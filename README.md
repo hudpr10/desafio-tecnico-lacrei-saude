@@ -81,6 +81,16 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 
 ---
 
+## Notas no Lighthouse
+
+### Celular
+
+![Notas no Celular](./public/assets/img/celular.png)
+
+### Computador
+
+![Notas no Computador](./public/assets/img/computador.png)
+
 ## 🛠️ Como Rodar o Projeto
 
 1. Certifique-se de ter o **Node.js** instalado.
