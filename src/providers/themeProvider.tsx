@@ -3,9 +3,10 @@
 import { useSelector } from "react-redux";
 import { ThemeProvider } from "styled-components";
 
-import { RootState } from "../store";
 import GlobalStyles from "@/styles/globalStyles";
+
 import { darkTheme, theme } from "@/styles/theme";
+import { RootState } from "../store";
 
 const MyThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);

@@ -34,17 +34,21 @@ const Header = () => {
 
       {/* Essa nav é para ser exibida em telas maiores */}
       <nav className="nav-text">
-        <Link href={"/help"}>
+        <Link href={"/help"} data-testid="help-text">
           <Button $style="ghost">Ajuda</Button>
         </Link>
-        <Button handleClick={() => dispatch(changeTheme())}>
+        <Button
+          handleClick={() => dispatch(changeTheme())}
+          testId="theme-text"
+          ariaPressed={darkMode}
+        >
           {darkMode ? "Modo Claro" : "Modo Escuro"}
         </Button>
       </nav>
 
       {/* Essa nav é para ser exibida em telas menores */}
       <nav className="nav-icon">
-        <Link href={"/help"}>
+        <Link href={"/help"} data-testid="help-icon">
           <Button $style="ghost" ariaLabel="Página de Ajuda">
             <HelpIcon color={theme.colors.emerald40} />
           </Button>
@@ -52,7 +56,8 @@ const Header = () => {
         <Button
           handleClick={() => dispatch(changeTheme())}
           ariaLabel={darkMode ? "Modo Claro" : "Modo Escuro"}
-          aria-pressed={darkMode}
+          ariaPressed={darkMode}
+          testId="theme-icon"
         >
           {choseIcon()}
         </Button>

@@ -8,6 +8,7 @@ export type ButtonProps = {
   handleClick?: () => void;
   ariaLabel?: string;
   ariaPressed?: boolean;
+  testId?: string;
 };
 
 const Button = ({
@@ -18,11 +19,13 @@ const Button = ({
   $style = "primary",
   ariaLabel,
   ariaPressed,
+  testId,
 }: ButtonProps) => {
   return (
     <StyledButton
       aria-label={ariaLabel}
       aria-pressed={ariaPressed}
+      data-testid={testId}
       disabled={disabled}
       type={type}
       onClick={

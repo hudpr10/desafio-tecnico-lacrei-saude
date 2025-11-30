@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
+import StyledNotFound from "@/styles/notFoundStyle";
 import Button from "@/components/Button";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import StyledNotFound from "@/styles/notFoundStyle";
-import Link from "next/link";
 
 const NotFound = () => {
   return (
