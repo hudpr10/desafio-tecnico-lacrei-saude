@@ -1,6 +1,10 @@
 import StyledPageParagraph from "./style";
 
-const PageParagraph = ({ children }: { children: React.ReactNode }) => {
+type PageParagraphProps = {
+  children: React.ReactNode;
+};
+
+const PageParagraph = ({ children }: PageParagraphProps) => {
   return <StyledPageParagraph>{children}</StyledPageParagraph>;
 };
 
