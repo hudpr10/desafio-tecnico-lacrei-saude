@@ -1,6 +1,10 @@
 import StyledPageTitle from "./style";
 
-const PageTitle = ({ children }: { children: React.ReactNode }) => {
+type PageTitleProps = {
+  children: React.ReactNode;
+};
+
+const PageTitle = ({ children }: PageTitleProps) => {
   return <StyledPageTitle>{children}</StyledPageTitle>;
 };
 
