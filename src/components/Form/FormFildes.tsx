@@ -1,5 +1,7 @@
 import { FieldErrors, UseFormRegister } from "react-hook-form";
+
 import Input from "../Input";
+
 import { UserFormData } from "@/schemas/userFormSchema";
 
 type FormFieldsprops = {
@@ -10,7 +12,6 @@ type FormFieldsprops = {
 const FormFields = ({ register, errors }: FormFieldsprops) => {
   return (
     <>
-      {" "}
       <Input
         label="Nome"
         placeholder="Digite seu nome completo"

@@ -1,6 +1,7 @@
 import { UseFormRegister } from "react-hook-form";
 
 import InputStyled from "./style";
+
 import { UserFormData } from "@/schemas/userFormSchema";
 
 type InputProps = {

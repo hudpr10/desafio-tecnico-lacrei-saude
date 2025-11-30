@@ -29,6 +29,7 @@ const Button = ({
         typeof handleClick === "function" ? () => handleClick() : () => {}
       }
       $style={$style}
+      // Aplica padding quando o conteúdo é texto
       style={{ padding: typeof children === "object" ? "0 0" : "0 32px" }}
     >
       {children}

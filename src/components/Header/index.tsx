@@ -1,15 +1,17 @@
 "use client";
 
-import { theme } from "@/styles/theme";
-import HelpIcon from "../Icons/HelpIcon";
-import StyledHeader from "./style";
-import DarkIcon from "../Icons/DarkIcon";
 import { useDispatch, useSelector } from "react-redux";
+import Link from "next/link";
+
+import StyledHeader from "./style";
+import HelpIcon from "../Icons/HelpIcon";
+import LightIcon from "../Icons/LightIcon";
+import DarkIcon from "../Icons/DarkIcon";
+import Button from "../Button";
+
+import { theme } from "@/styles/theme";
 import { RootState } from "@/store";
 import { changeTheme } from "@/store/slices/themeSlice";
-import LightIcon from "../Icons/LightIcon";
-import Button from "../Button";
-import Link from "next/link";
 
 const Header = () => {
   const darkMode = useSelector((state: RootState) => state.theme.darkMode);

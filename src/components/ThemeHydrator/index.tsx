@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+
 import { setTheme } from "@/store/slices/themeSlice";
 
-// Esse componente serve para manter o theme
-// da aplicação sincronizado entre cliente e servidor
+// Esse componente serve para manter o tema da aplicação sincronizado entre cliente e servidor
 const ThemeHydrator = () => {
   const dispatch = useDispatch();
 
