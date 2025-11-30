@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+import Header from ".";
+
+import ReduxProvider from "@/providers/reduxProvider";
 import { ThemeProvider } from "styled-components";
 import { theme } from "@/styles/theme";
-import ReduxProvider from "@/providers/reduxProvider";
-import userEvent from "@testing-library/user-event";
-import Header from ".";
 
 describe("Home", () => {
   it("renderiza o header corretamente", () => {

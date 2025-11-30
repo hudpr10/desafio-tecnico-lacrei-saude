@@ -18,7 +18,7 @@ const Form = () => {
     handleSubmit, // handleSubmit: executa validação + chama a função de submit
     formState: { errors }, // formState.errors: armazena mensagens de erro vindas do schema
   } = useForm<UserFormData>({
-    resolver: zodResolver(userFormSchema), // O resolver faz a ponte entre Zod e RHF, aplicando validação automática.
+    resolver: zodResolver(userFormSchema), // O resolver faz a ponte entre Zod e RHF, aplicando validação automática
   });
   // --------------------------------------------------------
 

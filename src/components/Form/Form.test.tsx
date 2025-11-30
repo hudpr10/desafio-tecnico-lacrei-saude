@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import Form from ".";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@/styles/theme";
 import ReduxProvider from "@/providers/reduxProvider";
 import userEvent from "@testing-library/user-event";
+
+import Form from ".";
+
+import { ThemeProvider } from "styled-components";
+import { theme } from "@/styles/theme";
 
 describe("Form", () => {
   it("renderiza o formulário com os campos corretos", () => {
