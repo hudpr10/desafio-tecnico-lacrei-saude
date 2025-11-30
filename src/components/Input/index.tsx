@@ -1,13 +1,14 @@
 import { UseFormRegister } from "react-hook-form";
-import type { FormData } from "../Form";
+
 import InputStyled from "./style";
+import { UserFormData } from "@/schemas/userFormSchema";
 
 type InputProps = {
   label: string;
   placeholder: string;
-  error?: string | undefined;
-  name: keyof FormData;
-  register: UseFormRegister<FormData>;
+  name: keyof UserFormData;
+  register: UseFormRegister<UserFormData>;
+  error?: string;
 };
 
 const Input = ({ label, placeholder, error, register, name }: InputProps) => {

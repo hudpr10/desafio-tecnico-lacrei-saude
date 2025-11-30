@@ -4,9 +4,8 @@ export type ButtonProps = {
   children: React.ReactNode;
   disabled?: boolean;
   $style?: "ghost" | "primary";
-  type?: "button" | "submit" | "reset" | undefined;
+  type?: "button" | "submit" | undefined;
   handleClick?: () => void;
-  maxWidth?: string;
   ariaLabel?: string;
   ariaPressed?: boolean;
 };
