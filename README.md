@@ -10,10 +10,10 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
 - **Next.js (App Router)**
 - **TypeScript**
 - **Styled-Components**
-- **Redux Toolkit** (ajuda para controlar o estado global da aplicação, evitando props desnecessárias)
-- **Zod + React Hook Form** (validação dos campos de maneira clara e objetiva)
+- **Redux Toolkit**
+- **Zod + React Hook Form**
 - **Jest + Testing Library**
-- **LocalStorage** (armazenamento do tema da aplicação)
+- **LocalStorage**
 - **Design System Marsha** + referências visuais do site da [Lacrei Saúde](https://lacreisaude.com.br/)
 - Técnica **Mobile First**
 
@@ -30,16 +30,35 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
   - `aria-labels`
   - HTML semântico
   - Contraste adequado
-  - Navegação confortável por teclado
+
+## ⚙️ Detalhamento Técnico
+
+Validação de Formulários -
+**React Hook Form + Zod**:
+
+- Performance nos campos, evitando que sejam renderizados a cada alteração no input.
+- Validação dos dados de maneira robusta, centralizada e clara feita pelo Zod.
+
+Estado Global - **Redux Toolkit**:
+
+- Centraliza o estado global da aplicação em uma store, evitando que sejam passadas muitas props desnecessárias para os componentes.
+- Reduz a complexidade do código, deixando os componentes mais claros.
+- Armazena o estado independente de onde o usuário esteja na página.
+
+Armazenamento Local - **localStorage**:
+
+- Armazena o tema preferido do usuário, garantindo persistência da escolha em novas sessões.
 
 ## 🧩 Estrutura do Projeto
+
+O projeto segue uma estrutura modular com componentes pequenos, para facilitar a manutenção, navegação, compreensão do código, testes unitários, evolução do projeto e reutilização de código.
 
 ```bash
 /app
 /components
-/styles → estilos globais
+/styles → Estilos globais
 /store → Redux Toolkit
-/providers → Theme provider, redux provider, etc.
+/providers → Theme provider e redux provider
 /schemas → Local separado para schemas do Zod e tipagem do formulário
 ```
 
@@ -49,7 +68,7 @@ O formulário foi construído em um único componente principal, utilizando inpu
 
 ![CI](https://github.com/hudpr10/desafio-tecnico-lacrei-saude/actions/workflows/main.yml/badge.svg)
 
-Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo todos os componentes unitários:
+Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo todos os componentes unitários e a página **Home**:
 
 ### **Home**
 
@@ -62,10 +81,12 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 
 - Renderização correta
 - Alteração do tema
+- Links de navegação
 
 ### **Footer**
 
 - Renderização correta
+- Links de navegação
 
 ### **Form**
 
@@ -79,7 +100,6 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 ### **Button**
 
 - Executa função genérica
-- Não executa função quando está disabled
 - Diferetes Estilos
 
 ![Testes Realizados](./public/assets/img/testes.png)
@@ -88,13 +108,13 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 
 Link para Actions: https://github.com/hudpr10/desafio-tecnico-lacrei-saude/actions
 
-Link para Deploys: https://github.com/hudpr10/desafio-tecnico-lacrei-saude/deployments
-
 A cada push ou Pull Request, o GitHub Actions executa:
 
 - Lint (ESLint)
 - Testes (Jest)
 - Build do projeto
+
+Link para Deploys: https://github.com/hudpr10/desafio-tecnico-lacrei-saude/deployments
 
 A cada push na **main**, a Vercel faz automaticamente o deploy
 
@@ -105,19 +125,15 @@ A cada push na **main**, a Vercel faz automaticamente o deploy
 
 ## Notas no Lighthouse
 
-Relatório gerado pelo Lighthouse: https://pagespeed.web.dev/analysis/https-desafio-tecnico-lacrei-saude-ecru-vercel-app/xzyv8049sl?hl=pt-br&form_factor=mobile
+Relatório Lighthouse: https://pagespeed.web.dev/analysis/https-desafio-tecnico-lacrei-saude-ecru-vercel-app/ykleqcwmfn?hl=pt-br&form_factor=mobile
 
-### Celular
+Feito em: 1 de dez. de 2025, 15:29:59
 
-![Notas no Celular](./public/assets/img/celular.png)
-
-<!-- ![Desempenho](./public/assets/img/celular.png)
-![Acessibilidade](./public/assets/img/celular.png)
-![Práticas recomendadas](./public/assets/img/celular.png) -->
-
-### Computador
-
-![Notas no Computador](./public/assets/img/computador.png)
+![Notas](./public/assets/img/lighthouse/geral.png)
+![Desempenho](./public/assets/img/lighthouse/desempenho.png)
+![Acessibilidade](./public/assets/img/lighthouse/acessibilidade.png)
+![Práticas recomendadas](./public/assets/img/lighthouse/praticas-recomendadas.png)
+![SEO](./public/assets/img/lighthouse/seo.png)
 
 ## 🛠️ Como Rodar o Projeto
 
