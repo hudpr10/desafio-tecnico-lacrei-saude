@@ -5,8 +5,6 @@
 Aplicação desenvolvida como parte do desafio técnico da **Lacrei Saúde**, com foco na **captação de novos voluntários**.  
 O projeto apresenta informações sobre o programa de voluntariado e permite que o usuário se candidate preenchendo um formulário simples e acessível.
 
----
-
 ## 🚀 Tecnologias Utilizadas
 
 - **Next.js (App Router)**
@@ -18,8 +16,6 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
 - **LocalStorage** (armazenamento do tema da aplicação)
 - **Design System Marsha** + referências visuais do site da [Lacrei Saúde](https://lacreisaude.com.br/)
 - Técnica **Mobile First**
-
----
 
 ## 📄 Funcionalidades
 
@@ -36,8 +32,6 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
   - Contraste adequado
   - Navegação confortável por teclado
 
----
-
 ## 🧩 Estrutura do Projeto
 
 ```bash
@@ -46,15 +40,16 @@ O projeto apresenta informações sobre o programa de voluntariado e permite que
 /styles → estilos globais
 /store → Redux Toolkit
 /providers → Theme provider, redux provider, etc.
+/schemas → Local separado para schemas do Zod e tipagem do formulário
 ```
 
 O formulário foi construído em um único componente principal, utilizando inputs e botões reaproveitáveis e validados com **Zod** + **React Hook Form**.
 
----
-
 ## 🧪 Testes
 
-Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo quatro áreas principais:
+![CI](https://github.com/hudpr10/desafio-tecnico-lacrei-saude/actions/workflows/main.yml/badge.svg)
+
+Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo todos os componentes unitários:
 
 ### **Home**
 
@@ -77,9 +72,36 @@ Os testes foram desenvolvidos com **Jest** e **React Testing Library**, cobrindo
 - Digitação nos campos
 - Clique no botão de submit
 
+### **Input**
+
+- Mensagem de Erro e Label customizadas
+
+### **Button**
+
+- Executa função genérica
+- Não executa função quando está disabled
+- Diferetes Estilos
+
 ![Testes Realizados](./public/assets/img/testes.png)
 
----
+## ⚙️ CI/CD
+
+Link para Actions: https://github.com/hudpr10/desafio-tecnico-lacrei-saude/actions
+
+Link para Deploys: https://github.com/hudpr10/desafio-tecnico-lacrei-saude/deployments
+
+A cada push ou Pull Request, o GitHub Actions executa:
+
+- Lint (ESLint)
+- Testes (Jest)
+- Build do projeto
+
+A cada push na **main**, a Vercel faz automaticamente o deploy
+
+### Evidências
+
+![Testes](https://github.com/hudpr10/desafio-tecnico-lacrei-saude/actions/workflows/main.yml/badge.svg)
+![Deploy](https://img.shields.io/website?url=https://desafio-tecnico-lacrei-saude-ecru.vercel.app/)
 
 ## Notas no Lighthouse
 
