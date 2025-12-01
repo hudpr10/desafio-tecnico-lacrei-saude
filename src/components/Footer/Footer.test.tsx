@@ -23,7 +23,9 @@ describe("Footer", () => {
         <Footer />
       </ThemeProvider>
     );
-    const link = screen.getByLabelText(/Abrir perfil no LinkedIn/i);
+    const link = screen.getByRole("link", {
+      name: /Abrir perfil no LinkedIn/i,
+    });
     expect(link).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/hudson-proque-reis/"

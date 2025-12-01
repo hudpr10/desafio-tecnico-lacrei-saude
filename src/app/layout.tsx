@@ -17,6 +17,8 @@ const nunito = Nunito({
 // Metadados
 export const metadata = {
   title: "Desafio Técnico | Lacrei Saúde",
+  description:
+    "Projeto de cadastro de voluntário | Desafio Técnico Lacrei Saúde",
 };
 
 export default function RootLayout({

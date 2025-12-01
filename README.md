@@ -105,9 +105,15 @@ A cada push na **main**, a Vercel faz automaticamente o deploy
 
 ## Notas no Lighthouse
 
+Relatório gerado pelo Lighthouse: https://pagespeed.web.dev/analysis/https-desafio-tecnico-lacrei-saude-ecru-vercel-app/xzyv8049sl?hl=pt-br&form_factor=mobile
+
 ### Celular
 
 ![Notas no Celular](./public/assets/img/celular.png)
+
+<!-- ![Desempenho](./public/assets/img/celular.png)
+![Acessibilidade](./public/assets/img/celular.png)
+![Práticas recomendadas](./public/assets/img/celular.png) -->
 
 ### Computador
 

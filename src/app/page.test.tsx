@@ -17,7 +17,7 @@ describe("Home", () => {
 
     const nameInput = screen.getByLabelText(/nome/i);
     const emailInput = screen.getByLabelText(/e-mail/i);
-    const btn = screen.getByRole("button", { name: /enviar/i });
+    const btn = screen.getByText(/enviar/i);
 
     await userEvent.type(nameInput, "Pedro");
     await userEvent.type(emailInput, "pedro@example.com");
