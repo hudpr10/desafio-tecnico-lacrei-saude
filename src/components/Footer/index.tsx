@@ -17,19 +17,19 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button $style="ghost">
+            <Button $style="ghost" ariaLabel="Abrir perfil no LinkedIn">
               <LinkedInIcon />
             </Button>
           </a>
         </li>
         <li>
           <a
-            aria-label="Abrir repositórios no GitHub"
+            aria-label="Abrir perfil no GitHub"
             href="https://github.com/hudpr10"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button $style="ghost">
+            <Button $style="ghost" ariaLabel="Abrir perfil no GitHub">
               <GithubIcon />
             </Button>
           </a>
@@ -41,7 +41,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button $style="ghost">
+            <Button $style="ghost" ariaLabel="Enviar email para Hudson">
               <MailIcon />
             </Button>
           </a>
