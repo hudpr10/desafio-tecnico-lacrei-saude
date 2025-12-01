@@ -6,9 +6,13 @@ import { z } from "zod";
 export const userFormSchema = z.object({
   name: z
     .string()
-    .min(2, { message: "O campo 'Nome' é obrigatório." })
+    .nonempty({ message: "O campo 'Nome' é obrigatório." })
+    .min(3, { message: "O nome deve ter no mínimo 3 caracteres." })
     .max(30, { message: "O nome não pode ultrapassar 30 caracteres." }),
-  email: z.email({ message: "O campo 'E-mail' é obrigatório." }),
+  email: z
+    .string()
+    .nonempty({ message: "O campo 'E-mail' é obrigatório." })
+    .email({ message: "Por favor digite um e-mail válido" }),
 });
 
 // Tipagem dos dados esperados pelo formulário.

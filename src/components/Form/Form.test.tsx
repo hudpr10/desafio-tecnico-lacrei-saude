@@ -48,6 +48,78 @@ describe("Form", () => {
     expect(emailInput).toBeInvalid();
   });
 
+  it("preenche nome e clica no botão", async () => {
+    render(
+      <ReduxProvider>
+        <ThemeProvider theme={theme}>
+          <Form />
+        </ThemeProvider>
+      </ReduxProvider>
+    );
+
+    const btn = screen.getByRole("button", { name: /Enviar/i });
+    const nameInput = screen.getByLabelText(/nome/i);
+
+    await userEvent.type(nameInput, "Pedro");
+    await userEvent.click(btn);
+
+    expect(nameInput).toBeValid();
+    expect(
+      screen.getByText(/O campo 'E-mail' é obrigatório./i)
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText(/e-mail/i)).toBeInvalid();
+  });
+
+  it("preenche com nome inválido e clica no botão", async () => {
+    render(
+      <ReduxProvider>
+        <ThemeProvider theme={theme}>
+          <Form />
+        </ThemeProvider>
+      </ReduxProvider>
+    );
+
+    const btn = screen.getByRole("button", { name: /Enviar/i });
+    const nameInput = screen.getByLabelText(/nome/i);
+
+    await userEvent.type(nameInput, "pe");
+    await userEvent.click(btn);
+
+    expect(nameInput).toBeInvalid();
+    expect(
+      screen.getByText(/O nome deve ter no mínimo 3 caracteres./i)
+    ).toBeInTheDocument();
+
+    expect(
+      screen.getByText(/O campo 'E-mail' é obrigatório./i)
+    ).toBeInTheDocument();
+    expect(screen.getByLabelText(/e-mail/i)).toBeInvalid();
+  });
+
+  it("preenche com e-mail inválido e clica no botão", async () => {
+    render(
+      <ReduxProvider>
+        <ThemeProvider theme={theme}>
+          <Form />
+        </ThemeProvider>
+      </ReduxProvider>
+    );
+
+    const btn = screen.getByRole("button", { name: /Enviar/i });
+    const nameInput = screen.getByLabelText(/nome/i);
+    const emailInput = screen.getByLabelText(/e-mail/i);
+
+    await userEvent.type(nameInput, "Pedro");
+    await userEvent.type(emailInput, "Pedro");
+    await userEvent.click(btn);
+
+    expect(nameInput).toBeValid();
+    expect(emailInput).toBeInvalid();
+    expect(
+      screen.getByText(/Por favor digite um e-mail válido/i)
+    ).toBeInTheDocument();
+  });
+
   it("não encontrar erros ao preencher os campos corretamente", async () => {
     render(
       <ReduxProvider>

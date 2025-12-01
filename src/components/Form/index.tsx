@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useDispatch } from "react-redux";
 
 import StyledForm from "./style";
-import FormFields from "./FormFildes";
+import FormFields from "./FormFields";
 import FormButton from "./FormButton";
 
 import { setUser } from "@/store/slices/userSlice";
